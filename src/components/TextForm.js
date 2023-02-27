@@ -48,7 +48,7 @@ function TextForm(props) {
     </div>
     <div className="container" style={{color: props.mode==='dark'?'white':'#042743'}}>
       <h1 style={{color: props.mode==='dark'?'white':'#042743'}}>Your text summmary</h1>
-      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words and {text.length} Characters</p>
+      <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Words and {text.length} Characters</p>
     </div>
     </>
   );
